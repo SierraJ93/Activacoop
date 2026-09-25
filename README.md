@@ -194,6 +194,6 @@ Autor y contexto académico
 Proyecto desarrollado como parte del proceso formativo de Análisis y
 Desarrollo de Software -- SENA.
 
-Autor: Jhonatan Andrés Sierra Álvarez
+Autor: Jhonatan Andrés Sierra Álvarez, 
         Camilo Hernadez
         
