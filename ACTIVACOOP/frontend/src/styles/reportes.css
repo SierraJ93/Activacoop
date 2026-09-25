@@ -1,0 +1,223 @@
+/* =========================================================
+   ACTIVACOOP - REPORTES
+========================================================= */
+
+.reportes-section {
+  padding: 40px 0;
+}
+
+/* ENCABEZADO */
+
+.reportes-header {
+  margin-bottom: 35px;
+}
+
+.reportes-badge {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  border-radius: 25px;
+
+  background-color: #e4f8ed;
+  color: #009e52;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.reportes-header h2 {
+  margin: 18px 0 10px;
+
+  color: #222222;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.reportes-header p {
+  color: #666666;
+  font-size: 1rem;
+}
+
+/* TARJETAS */
+
+.reportes-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+.reporte-card {
+  padding: 28px;
+
+  border: 1px solid #e8e8e8;
+  border-top: 5px solid #00BF63;
+
+  border-radius: 16px;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+
+  transition: 0.25s ease;
+}
+
+.reporte-card:nth-child(2) {
+  border-top-color: #FF993E;
+}
+
+.reporte-card:nth-child(3) {
+  border-top-color: #FFCB0A;
+}
+
+.reporte-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ICONOS */
+
+.reporte-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  background-color: #eaf9f1;
+
+  font-size: 1.8rem;
+}
+
+.reporte-card:nth-child(2) .reporte-icon {
+  background-color: #fff3e8;
+}
+
+.reporte-card:nth-child(3) .reporte-icon {
+  background-color: #fff9d9;
+}
+
+/* TEXTOS */
+
+.reporte-card h3 {
+  margin-bottom: 12px;
+
+  color: #222222;
+  font-size: 1.2rem;
+}
+
+.reporte-card p {
+  min-height: 55px;
+
+  color: #666666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* BOTONES */
+
+.reporte-actions {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.reporte-actions button {
+  width: 100%;
+
+  padding: 13px 16px;
+
+  border: none;
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.btn-excel {
+  background-color: #00BF63;
+  color: #ffffff;
+}
+
+.btn-excel:hover {
+  background-color: #009e52;
+}
+
+.btn-pdf {
+  background-color: #FF993E;
+  color: #ffffff;
+}
+
+.btn-pdf:hover {
+  background-color: #e98224;
+}
+
+.reporte-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* MENSAJES */
+
+.reportes-success {
+  margin-bottom: 20px;
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background-color: #e4f8ed;
+  color: #009e52;
+}
+
+.reportes-error {
+  margin-bottom: 20px;
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background-color: #fff0df;
+  color: #a65300;
+}
+
+.reportes-loading {
+  color: #009e52;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .reportes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .reportes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reportes-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .reporte-card {
+    padding: 22px;
+  }
+}

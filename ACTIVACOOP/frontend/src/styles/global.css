@@ -1,0 +1,292 @@
+/* =========================================================
+   ACTIVACOOP - ESTILOS GLOBALES
+   ========================================================= */
+/* =========================================================
+   ACTIVACOOP
+   ESTILOS GLOBALES
+   ETAPA 6
+   ========================================================= */
+
+:root {
+  --color-primary: #00BF63;
+  --color-primary-dark: #009f52;
+
+  --color-yellow: #FFCB0A;
+  --color-orange: #FF993E;
+
+  --color-background: #F5F7F6;
+  --color-white: #FFFFFF;
+
+  --color-text: #222222;
+  --color-text-secondary: #666666;
+
+  --color-border: #E5E5E5;
+
+  --shadow-sm:
+    0 2px 8px rgba(0, 0, 0, 0.06);
+
+  --shadow-md:
+    0 6px 20px rgba(0, 0, 0, 0.08);
+
+  --shadow-lg:
+    0 12px 35px rgba(0, 0, 0, 0.10);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --container-width: 1200px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background-color: var(--color-background);
+
+  color: var(--color-text);
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   ENLACES
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   IMÁGENES
+   ========================================================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+
+  margin: 0 auto;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.section {
+  padding: 70px 0;
+}
+
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+.section-title {
+  margin: 0 0 10px;
+
+  font-size: 2rem;
+  font-weight: 750;
+
+  color: var(--color-text);
+}
+
+
+.section-subtitle {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+   ========================================================= */
+
+.btn-primary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  background-color: var(--color-primary);
+
+  color: var(--color-white);
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 15px rgba(0, 191, 99, 0.25);
+}
+
+
+/* =========================================================
+   BOTÓN SECUNDARIO
+   ========================================================= */
+
+.btn-secondary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+
+  border: 1px solid var(--color-primary);
+
+  border-radius: var(--radius-sm);
+
+  background-color: transparent;
+
+  color: var(--color-primary);
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section {
+    padding: 45px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+}
+
+
+
+
+button {
+  font-family: inherit;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+button:not(:disabled):active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}

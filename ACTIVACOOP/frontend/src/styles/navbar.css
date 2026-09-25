@@ -1,0 +1,426 @@
+/* =========================================================
+   ACTIVACOOP - BARRA DE NAVEGACIÓN
+========================================================= */
+
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+========================================================= */
+
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 0 35px;
+
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* =========================================================
+   LOGOTIPO
+========================================================= */
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+
+  color: #00BF63;
+
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-logo:hover {
+  color: #009e52;
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   MENÚ DE NAVEGACIÓN
+========================================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   ENLACES
+========================================================= */
+
+.nav-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 14px;
+
+  color: #3b3b3b;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  border-radius: 8px;
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.nav-link:hover {
+  color: #00BF63;
+  background-color: #f0fbf5;
+}
+
+
+/* =========================================================
+   ENLACE ACTIVO
+========================================================= */
+
+.nav-link.active {
+  color: #00BF63;
+  font-weight: 700;
+}
+
+
+/* INDICADOR VERDE */
+
+.nav-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 12px;
+  right: 12px;
+  bottom: 2px;
+
+  height: 3px;
+
+  border-radius: 5px;
+
+  background-color: #00BF63;
+}
+
+
+/* =========================================================
+   ACCIONES DE USUARIO
+========================================================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BOTÓN CERRAR SESIÓN
+========================================================= */
+
+.logout-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+
+  background-color: #00BF63;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 191, 99, 0.15);
+
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* EFECTO HOVER */
+
+.logout-button:hover {
+  background-color: #009e52;
+
+  box-shadow: 0 6px 14px rgba(0, 191, 99, 0.25);
+
+  transform: translateY(-2px);
+}
+
+
+/* EFECTO AL PRESIONAR */
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
+
+/* ACCESIBILIDAD */
+
+.logout-button:focus-visible {
+  outline: 3px solid #FFCB0A;
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   BOTÓN INICIAR SESIÓN
+========================================================= */
+
+.navbar-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  background-color: #00BF63;
+  color: #ffffff;
+
+  border-radius: 9px;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  box-shadow: 0 4px 10px rgba(0, 191, 99, 0.15);
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.navbar-login:hover {
+  background-color: #009e52;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 14px rgba(0, 191, 99, 0.25);
+}
+
+
+/* =========================================================
+   TABLETAS
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .navbar-container {
+    padding: 15px 22px;
+
+    gap: 18px;
+  }
+
+  .navbar-logo {
+    font-size: 1.55rem;
+  }
+
+  .navbar-links {
+    gap: 5px;
+  }
+
+  .nav-link {
+    padding: 10px 9px;
+    font-size: 0.9rem;
+  }
+
+  .logout-button,
+  .navbar-login {
+    padding: 10px 14px;
+    font-size: 0.88rem;
+  }
+}
+
+
+/* =========================================================
+   CELULARES
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 16px 15px;
+
+    gap: 14px;
+  }
+
+  .navbar-logo {
+    font-size: 1.65rem;
+  }
+
+  .navbar-links {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 6px;
+  }
+
+  .nav-link {
+    padding: 9px 10px;
+
+    font-size: 0.9rem;
+  }
+
+  .nav-link.active::after {
+    left: 10px;
+    right: 10px;
+    bottom: 1px;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logout-button,
+  .navbar-login {
+    padding: 11px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .navbar-container {
+    padding: 14px 10px;
+    gap: 10px;
+  }
+
+  .navbar-logo {
+    font-size: 1.45rem;
+  }
+
+  .navbar-links {
+    gap: 3px;
+  }
+
+  .nav-link {
+    padding: 8px 7px;
+    font-size: 0.82rem;
+  }
+
+  .logout-button,
+  .navbar-login {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================================
+   IDENTIDAD VISUAL VERDE Y NARANJA
+========================================================= */
+
+.navbar-logo {
+  color: #00BF63 ;
+}
+
+.navbar-logo:hover {
+  color: #FF993E;
+}
+
+.nav-link:hover {
+  color: #e98224 ;
+  background-color: #fff3e8 10%;
+}
+
+.nav-link.active {
+  color: #00BF63;
+}
+
+.nav-link.active::after {
+  background-color: #FF993E;
+}
+
+/* Botón de inicio de sesión */
+
+.navbar-login {
+  background-color: #00BF63;
+}
+
+.navbar-login:hover {
+  background-color: #009e52;
+}
+
+/* Botón de cerrar sesión */
+
+.logout-button {
+  background-color: #f5790c;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(255, 153, 62, 0.18);
+}
+
+.logout-button:hover {
+  background-color: #f29238;
+  box-shadow: 0 6px 14px rgba(255, 153, 62, 0.25);
+}
+
